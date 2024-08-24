@@ -1,0 +1,99 @@
+{
+  "students": [
+    {
+      "name": "Emily Davis",
+      "email": "emilydavis@example.com",
+      "id": "dd85"
+    },
+    {
+      "name": "David Brown",
+      "email": "davidbrown@example.com",
+      "id": "eb21"
+    },
+    {
+      "name": "Emma Wilson",
+      "email": "emmawilson@example.com",
+      "id": "f51d"
+    },
+    {
+      "name": "James Taylor",
+      "email": "jamestaylor@example.com",
+      "id": "05e8"
+    },
+    {
+      "name": "Olivia Martinez",
+      "email": "oliviamartinez@example.com",
+      "id": "8d26"
+    },
+    {
+      "name": "Sophia Anderson",
+      "email": "sophiaanderson@example.com",
+      "id": "1e9a"
+    },
+    {
+      "name": "Liam Thompson",
+      "email": "liamthompson@example.com",
+      "id": "6abd"
+    },
+    {
+      "name": "Mason White",
+      "email": "masonwhite@example.com",
+      "id": "705c"
+    },
+    {
+      "name": "Isabella Harris",
+      "email": "isabellaharris@example.com",
+      "id": "bdb8"
+    },
+    {
+      "name": "Lucas Clark",
+      "email": "lucasclark@example.com",
+      "id": "bd41"
+    },
+    {
+      "name": "Mia Lewis",
+      "email": "mialewis@example.com",
+      "id": "d487"
+    },
+    {
+      "name": "Ethan Young",
+      "email": "ethanyoung@example.com",
+      "id": "4f7a"
+    },
+    {
+      "name": "Charlotte Hall",
+      "email": "charlottehall@example.com",
+      "id": "bc3d"
+    },
+    {
+      "name": "Alexander King",
+      "email": "alexanderking@example.com",
+      "id": "c7ff"
+    },
+    {
+      "name": "Amelia Wright",
+      "email": "ameliawright@example.com",
+      "id": "2e5b"
+    },
+    {
+      "name": "Benjamin Scott",
+      "email": "benjaminscott@example.com",
+      "id": "d2c6"
+    },
+    {
+      "name": "Avery Green",
+      "email": "averygreen@example.com",
+      "id": "39aa"
+    },
+    {
+      "id": "d39a",
+      "name": "John Doe",
+      "email": "example email"
+    },
+    {
+      "id": "0f04",
+      "name": "Gal Regev",
+      "email": "galregev@gmail.com"
+    }
+  ]
+}

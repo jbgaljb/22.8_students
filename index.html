@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-6">
+                <button class="m-3" onclick="listStudents()">List out the students</button><br>
+
+                <button class="m-3" onclick="addStudent()">Add student</button>
+                email: <input id="add-email" type="text"> name: <input id="add-name" type="text"><br>
+
+                <button class="m-3" onclick="deleteStudent()">Delete student</button>
+                id: <input id="delete-id" type="text">
+
+                <button class="m-3" onclick="updateStudent()">Update student</button>
+                id: <input id="update-id" type="text"> email: <input id="update-email" type="text"> name: <input id="update-name" type="text"><br>
+
+            </div>
+            <div class="col-6" id="content">  
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SERVER = 'http://localhost:3000/';
+        const listStudents = () => {
+            axios.get(SERVER + 'students')
+                .then((response) =>{
+                    document.getElementById('content').innerHTML = response.data.map((student) => {
+                        return `<div>
+                            <h1>${student.name}</h1>
+                            <p>${student.email}</p>
+                            <p>${student.id}</p>
+                            </div>`
+                    }).join('');
+                })
+        }
+
+        const addStudent = () => {
+            axios.post(SERVER + 'students', {
+                name: document.getElementById('add-name').value,
+                email: document.getElementById('add-email').value
+            })}
+
+        const deleteStudent = () => {
+            axios.delete(SERVER + 'students/' + document.getElementById('delete-id').value)
+            .then((response) => {
+                console.log(response);
+            })
+        }
+
+        const updateStudent = () => {
+            axios.put(SERVER + 'students/' + document.getElementById('update-id').value, {
+                name: document.getElementById('update-name').value,
+                email: document.getElementById('update-email').value
+            })
+        }
+    </script>
+</body>
+</html>
